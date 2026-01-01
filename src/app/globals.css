@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-carone-orange text-white font-medium rounded-lg
+           hover:bg-carone-orange-dark transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-carone-orange focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-carone-green text-white font-medium rounded-lg
+           hover:bg-carone-green-light transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-carone-green focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3
+           border-2 border-carone-orange text-carone-orange font-medium rounded-lg
+           hover:bg-carone-orange hover:text-white transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-carone-orange focus:ring-offset-2;
+  }
+}
