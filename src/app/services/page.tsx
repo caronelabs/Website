@@ -3,8 +3,19 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+type ServiceStatus = "active" | "beta" | "coming-soon";
+
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  href: string;
+  status: ServiceStatus;
+}
+
 // Configure your render.com services here
-const services = [
+const services: Service[] = [
   {
     id: "service-1",
     title: "Service One",
@@ -18,7 +29,7 @@ const services = [
     ],
     // Replace with your actual render.com service URL
     href: "https://your-service-1.onrender.com",
-    status: "active", // active, coming-soon, beta
+    status: "active",
   },
   {
     id: "service-2",
