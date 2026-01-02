@@ -1,4 +1,4 @@
-# Carone Labs Website
+# Carone Labs, LLC Website
 
 Official website for Carone Labs, LLC - [caronelabs.com](https://caronelabs.com)
 
