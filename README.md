@@ -1,6 +1,6 @@
-# Carone Labs Website
+# Carone Labs, LLC Website
 
-Official website for Carone Labs - [caronelabs.com](https://caronelabs.com)
+Official website for Carone Labs, LLC - [caronelabs.com](https://caronelabs.com)
 
 ## Tech Stack
 
@@ -116,4 +116,4 @@ The contact form currently logs to console. To make it functional:
 
 ## License
 
-Private - All rights reserved Carone Labs
+Private - All rights reserved Carone Labs, LLC
