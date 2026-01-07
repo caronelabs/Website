@@ -5,26 +5,19 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Service One",
+    title: "HawkOps",
     description:
-      "Description of your first render.com service. Explain what it does and how it helps your customers.",
-    href: "#", // Link to your render.com service
+      "An immersive ITSM business simulation for UW-Whitewater. Experience real-time IT service management scenarios with AI-powered incidents and team collaboration.",
+    href: "https://hawkops.caronelabs.com",
     icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M13 10V3L4 14h7v7l9-11h-7z"
-        />
-      </svg>
+      <img
+        src="/hawkops-logo.png"
+        alt="HawkOps ITSM Simulation"
+        className="w-12 h-12 object-contain"
+      />
     ),
   },
+
   {
     title: "Service Two",
     description:
