@@ -13,7 +13,7 @@ const services = [
       <img
         src="/hawkops-logo.png"
         alt="HawkOps ITSM Simulation"
-        className="w-12 h-12 object-contain"
+        className="w-24 h-24 object-contain"
       />
     ),
   },
