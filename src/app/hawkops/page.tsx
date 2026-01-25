@@ -22,8 +22,8 @@ export default function HawkOpsPage() {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center text-center"
           >
-            {/* Logo - 4 inch x 4 inch (384px x 384px at 96 DPI) */}
-            <div className="w-96 h-96 relative mb-8">
+            {/* Logo - 6 inch x 6 inch (576px x 576px at 96 DPI) */}
+            <div className="w-[576px] h-[576px] relative mb-8">
               <Image
                 src="/hawkops-logo.png"
                 alt="HawkOps Logo"
