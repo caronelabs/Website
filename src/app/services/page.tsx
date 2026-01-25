@@ -14,21 +14,20 @@ interface Service {
   status: ServiceStatus;
 }
 
-// Configure your render.com services here
+// Configure your services here
 const services: Service[] = [
   {
-    id: "service-1",
-    title: "Service One",
+    id: "hawkops",
+    title: "HawkOps",
     description:
-      "A comprehensive description of your first service. Explain the key features, benefits, and use cases.",
+      "An immersive ITSM business simulation for UW-Whitewater. Experience real-time IT service management scenarios with AI-powered incidents and team collaboration.",
     features: [
-      "Feature one of the service",
-      "Feature two of the service",
-      "Feature three of the service",
-      "Feature four of the service",
+      "Real-time IT service management scenarios",
+      "AI-powered incident management",
+      "Team collaboration features",
+      "Business simulation for UW-Whitewater",
     ],
-    // Replace with your actual render.com service URL
-    href: "https://your-service-1.onrender.com",
+    href: "/hawkops",
     status: "active",
   },
   {
@@ -153,27 +152,49 @@ export default function ServicesPage() {
 
                     <div className="flex-shrink-0">
                       {service.status === "active" ? (
-                        <a
-                          href={service.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary inline-flex items-center gap-2"
-                        >
-                          Launch Service
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                        service.href.startsWith("/") ? (
+                          <Link
+                            href={service.href}
+                            className="btn-primary inline-flex items-center gap-2"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                            />
-                          </svg>
-                        </a>
+                            Learn More
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </Link>
+                        ) : (
+                          <a
+                            href={service.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary inline-flex items-center gap-2"
+                          >
+                            Launch Service
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                              />
+                            </svg>
+                          </a>
+                        )
                       ) : (
                         <button
                           disabled

@@ -8,7 +8,7 @@ const services = [
     title: "HawkOps",
     description:
       "An immersive ITSM business simulation for UW-Whitewater. Experience real-time IT service management scenarios with AI-powered incidents and team collaboration.",
-    href: "https://hawkops.caronelabs.com",
+    href: "/hawkops",
     icon: (
       <img
         src="/hawkops-logo.png"
