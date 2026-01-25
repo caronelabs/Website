@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -82,31 +83,52 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-carone-dark via-carone-green-dark to-carone-green min-h-[80vh] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovative Solutions for
-              <span className="text-carone-orange block mt-2">
-                Modern Challenges
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-              We build powerful tools and services that help businesses
-              streamline operations and achieve their goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="btn-primary">
-                Explore Services
-              </Link>
-              <Link href="/contact" className="btn-outline">
-                Get in Touch
-              </Link>
-            </div>
-          </motion.div>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Logo - 8 inch x 8 inch (768px x 768px at 96 DPI) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="flex-shrink-0"
+            >
+              <div className="w-[768px] h-[768px] relative">
+                <Image
+                  src="/Logo.png"
+                  alt="Carone Labs Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-center lg:text-left"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Innovative Solutions for
+                <span className="text-carone-orange block mt-2">
+                  Modern Challenges
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl mb-10">
+                We build powerful tools and services that help businesses
+                streamline operations and achieve their goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link href="/services" className="btn-primary">
+                  Explore Services
+                </Link>
+                <Link href="/contact" className="btn-outline">
+                  Get in Touch
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
